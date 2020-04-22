@@ -6,18 +6,24 @@ import Home from './Home'
 class App extends Component {
   componentDidMount() {
     this.props.dispatch(handleInitialData())
-    
   }
-
       render() {
         return (
           <div>
-            <Home/>
-            homesmaybe ?
+            {this.props.loading ===true
+            ? null
+            : <Home/>}
+          
+          App
           </div>
           )
         }
-
   }
+function mapStateToProps({authedUser}) { 
+  return {
+    loading: authedUser===null
+  }
+}
 
-export default connect()(App)
+
+export default connect(mapStateToProps)(App)
