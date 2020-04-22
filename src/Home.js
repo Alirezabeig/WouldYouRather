@@ -9,7 +9,7 @@ class home extends Component {
         
           {this.props.questionIds.map((id) => (
             <li key={id}>
-              <div>TWEET ID: {id}</div>
+              <div>question ID: {id}</div>
             </li>
           ))}
         
