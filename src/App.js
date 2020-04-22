@@ -7,12 +7,16 @@ class App extends Component {
   componentDidMount() {
     this.props.dispatch(handleInitialData())
   }
+
   render (){
     return (
-      <div>starter Code</div>
+      <div>
+        homesmaybe ?
+        <home/>
+      </div>
       )
     }
 
-  };
+  }
 
 export default connect()(App)

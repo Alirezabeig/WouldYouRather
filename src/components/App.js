@@ -1,13 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { handleInitialData } from './actions/Shared'
+import home from './components/home'
 
-function App() {
-  return (
-    <div>
-      starter code
-    </div>
-  );
-}
+class App extends Component {
+  componentDidMount() {
+    this.props.dispatch(handleInitialData())
+  }
 
-export default App;
+  render (){
+    
+    return (
+      <div>
+        <home />
+      </div>
+      )
+    }
+
+  }
+
+export default connect()(App)

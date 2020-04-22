@@ -4,10 +4,9 @@ import {connect} from 'react-redux'
 class home extends Component {
 
     render (){
-        console.log(this.props)
         return (
             <div>
-
+                This is home.
             </div>
         )
     }
