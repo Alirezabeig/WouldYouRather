@@ -1,6 +1,6 @@
 export const RECEIVE_USERS = 'RECEIVE_USERS'
 
-export function ReceiveUsers (users) {
+export function ReceiveUsers(users) {
 
   return {
     type: RECEIVE_USERS,
