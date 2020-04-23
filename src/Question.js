@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import {formatQuestion} from './utils/helpers'
 import {connect} from 'react-redux'
+import './css/question.css' 
 
 class Question extends Component {
     
@@ -10,14 +10,20 @@ class Question extends Component {
         console.log(this.props)
         return (
             <div>
+                <div className="question">
+                <div className="question-title"> 
+                    <img src={user.avatarURL} alt="avatar!" className="avatar" />
+                    {user.name}
+                    
+                <div className="question-body">
+                    <p>Would You Rather?</p>
+                    <p>A: {question.optionOne.text}</p>
+                    <p>B: {question.optionTwo.text}</p>
+                </div>
 
-                <img src={user.avatarURL} alt="avatar!" />
-                {user.name}
-                
-                <p>Would You Rather?</p>
-                <p>A: {question.optionOne.text}</p>
-                <p>B: {question.optionTwo.text}</p>
-                   
+                </div>
+                </div>
+                        
            </div>
         )
     }
