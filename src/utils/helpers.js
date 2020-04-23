@@ -13,6 +13,7 @@ export function formatQuestion (question, author, authedUser, parentQuestion) {
     id,
     timestamp,
     text,
+    author,
     avatar: avatarURL,
     parent: !parentQuestion ? null : {
       author: parentQuestion.author,
