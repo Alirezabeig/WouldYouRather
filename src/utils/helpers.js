@@ -4,7 +4,7 @@ export function formatDate (timestamp) {
   return time.substr(0, 5) + time.slice(-2) + ' | ' + d.toLocaleDateString()
 }
 
-export function formatQuestion (question, author, authedUser, parentQuestion) {
+export function formatQuestion (question, author, authedUser) {
   const { id, text, timestamp } = question
   const { name, avatarURL } = author
 
@@ -15,9 +15,7 @@ export function formatQuestion (question, author, authedUser, parentQuestion) {
     text,
     author,
     avatar: avatarURL,
-    parent: !parentQuestion ? null : {
-      author: parentQuestion.author,
-      id: parentQuestion.id,
-    }
+
+    
   }
 }
