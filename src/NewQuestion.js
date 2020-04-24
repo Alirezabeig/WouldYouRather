@@ -40,6 +40,7 @@ class NewQuestion extends Component {
     const { optionOneText, optionTwoText} = this.state
     return (
       <div>
+          <h2>Would You Rather...</h2>
         <form className='' onSubmit={this.handleSubmit}>
           <textarea
             placeholder="Enter Option A"
