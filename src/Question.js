@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import './css/question.css' 
+import './css/question.css'
+import {Link} from 'react-router-dom' 
 
 class Question extends Component {
     
@@ -9,7 +10,7 @@ class Question extends Component {
 
         console.log(this.props)
         return (
-            <div>
+            <Link>
                 <div className="question">
                 <div className="question-title"> 
                     <img src={user.avatarURL} alt="avatar!" className="avatar" />
@@ -24,7 +25,7 @@ class Question extends Component {
                 </div>
                 </div>
                         
-           </div>
+           </Link>
         )
     }
 }
