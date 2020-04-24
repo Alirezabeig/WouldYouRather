@@ -18,7 +18,7 @@ class Question extends Component {
                 <div className="question-body">
                     <p>Would You Rather?</p>
                     <p>Option A: {question.optionOne.text}</p>
-                    <p>Opti0on B: {question.optionTwo.text}</p>
+                    <p>Option B: {question.optionTwo.text}</p>
                 </div>
 
                 </div>

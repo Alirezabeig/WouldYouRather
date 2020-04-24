@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {handleAddQuestion} from './actions/Questions'
 import { connect } from 'react-redux'
+import './css/question.css'
 
 class NewQuestion extends Component {
   state = {
@@ -40,6 +41,9 @@ class NewQuestion extends Component {
     const { optionOneText, optionTwoText} = this.state
     return (
       <div>
+
+                <div className="question">
+                <div className="question-title"> 
           <h2>Would You Rather...</h2>
         <form className='' onSubmit={this.handleSubmit}>
           <textarea
@@ -67,6 +71,9 @@ class NewQuestion extends Component {
               Submit
           </button>
         </form>
+
+        </div>
+        </div>
       </div>
     )
   }
