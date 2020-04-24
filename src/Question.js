@@ -5,7 +5,7 @@ import './css/question.css'
 class Question extends Component {
     
     render (){
-        const { question, user } = this.props
+        const { question, user, question_id } = this.props
 
         console.log(this.props)
         return (
@@ -17,8 +17,8 @@ class Question extends Component {
                     
                 <div className="question-body">
                     <p>Would You Rather?</p>
-                    <p>A: {question.optionOne.text}</p>
-                    <p>B: {question.optionTwo.text}</p>
+                    <p>Option A: {question.optionOne.text}</p>
+                    <p>Opti0on B: {question.optionTwo.text}</p>
                 </div>
 
                 </div>
@@ -28,18 +28,17 @@ class Question extends Component {
         )
     }
 }
-function mapStateToProps ({ users, questions}, { id }) {
-    const question = questions[id]
-    const question_id=question.id
-    const user = users[question.author]
+function mapStateToProps({ questions, users }, { id }) {
+  const question = questions[id]
+  const question_id = question.id
+  const user = users[question.author]
 
-    return {
-      question, 
-      question_id,
-      user
-    }
+  return {
+    question,
+    question_id,
+    user
   }
-
+}
 
   
 

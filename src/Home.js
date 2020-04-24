@@ -18,6 +18,7 @@ class home extends Component {
         )
     }
 }
+//<Question id={id}/>
 function mapStateToProps({questions}) {
     return {
         questionIds: Object.keys(questions)
