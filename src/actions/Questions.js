@@ -1,6 +1,7 @@
 
 import {saveQuestion} from '../utils/api'
 import { showLoading, hideLoading } from 'react-redux-loading'
+import { handleInitialData } from './Shared'
 
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
 export const ADD_QUESTION = 'ADD_QUESTION'
@@ -13,22 +14,19 @@ export function AddQuestion (question){
   }
 }
 
-export function handleAddQuestion ( text){
-  return (dispatch, getState) => {
-    const {authedUser} = getState()
+export function handleAddQuestion (info){
+  console.log('Option_Input: ', info)  
+  return dispatch => {
     dispatch(showLoading())
 
-    return saveQuestion ({
-      text,
-      author :authedUser
+    return saveQuestion({
+      ...info,
+      author: info.authedUser
     })
-    .then((question) => dispatch(AddQuestion(question)))
-    .then(() =>  dispatch(hideLoading()))
+      .then(res => dispatch(handleInitialData(res.author)))
+      .then(() => dispatch(hideLoading()))
   }
 }
-
-
-
 
 
 export function ReceiveQuestions (questions) {
