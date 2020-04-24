@@ -16,10 +16,11 @@ export function AddQuestion (question){
 export function handleAddQuestion ( text){
   return (dispatch, getState) => {
     const {authedUser} = getState()
-    dispatch(showLoading)
+    dispatch(showLoading())
 
     return saveQuestion ({
       text,
+      author :authedUser
     })
     .then((question) => dispatch(AddQuestion(question)))
     .then(() =>  dispatch(hideLoading()))
