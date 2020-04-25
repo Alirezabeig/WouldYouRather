@@ -3,9 +3,7 @@ import {
   _getUsers,
   _getUser,
   _getQuestions,
-  _saveQuestion,
-  //_saveQuestionVote
-
+  
 } from './_DATA.js'
 
 export function getInitialData () {
@@ -13,11 +11,13 @@ export function getInitialData () {
 
     _getUsers(),
     _getQuestions(),
-    //_saveQuestionVote(),
+    
 
   ]).then(([users, questions]) => ({
     users,
     questions,
+    
+  
 
   }))
 }

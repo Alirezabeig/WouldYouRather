@@ -1,5 +1,6 @@
 
 import {saveQuestion} from '../utils/api'
+import {saveQuestionVote} from '../utils/_DATA'
 import { showLoading, hideLoading } from 'react-redux-loading'
 import { handleInitialData } from './Shared'
 
@@ -35,3 +36,16 @@ export function ReceiveQuestions (questions) {
     questions,
   }
 }
+
+export function handleSaveQuestionAnswer(answerObj) {
+  return dispatch => {
+    dispatch(showLoading())
+
+    return saveQuestionVote({
+      ...answerObj
+    })
+      .then(() => dispatch(handleInitialData(answerObj.authedUser)))
+      .then(() => dispatch(hideLoading()))
+  }
+}
+
