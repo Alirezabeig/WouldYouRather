@@ -7,10 +7,12 @@ class Question extends Component {
     
     render (){
         const { question, user, question_id } = this.props
+        const {id} = question
 
         console.log(this.props)
         return (
-            <Link>
+            <Link to={`/question/${id}`}>
+                
                 <div className="question">
                 <div className="question-title"> 
                     <img src={user.avatarURL} alt="avatar!" className="avatar" />

@@ -7,7 +7,7 @@ class home extends Component {
         console.log(this.props)
         return (
             <div>
-        This is home!
+        
           {this.props.questionIds.map((id) => (
             <li key={id}>
               <Question id={id}/>
