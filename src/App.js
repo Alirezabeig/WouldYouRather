@@ -7,6 +7,7 @@ import NewQuestion from './NewQuestion'
 import QuestionMore from './QuestionMore'
 import Nav from './Nav'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
+import './css/app.css'
 
 class App extends Component {
   componentDidMount() {
@@ -19,7 +20,7 @@ class App extends Component {
           <Router>
             <Fragment>
               <LoadingBar/>
-            <div>
+            <div className="app">
                 
                 <Nav/>
                   {this.props.loading ===true

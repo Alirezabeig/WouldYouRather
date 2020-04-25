@@ -11,9 +11,9 @@ class Question extends Component {
 
         console.log(this.props)
         return (
-            <Link to={`/question/${id}`}>
+            <Link to={`/question/${id}`} className="question">
                 
-                <div className="question">
+                <div className="question" >
                 <div className="question-title"> 
                     <img src={user.avatarURL} alt="avatar!" className="avatar" />
                     {user.name}
