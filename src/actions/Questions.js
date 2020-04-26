@@ -36,7 +36,7 @@ export function ReceiveQuestions (questions) {
   }
 }
 
-export function handleSaveVote(voteObj) {
+export function handleSaveQuestionVote(voteObj) {
   return dispatch => {
     dispatch(showLoading())
 

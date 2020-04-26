@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import './css/question.css'
-//import { saveQuestionVote } from './actions/Questions'
+import { handleSaveQuestionVote } from './actions/Questions'
 import {Link} from 'react-router-dom' 
 
 class Details extends Component {
     
     handleVote = answerObj => {
         const { dispatch } = this.props
-        //dispatch(saveQuestionVote(answerObj))
+        dispatch(handleSaveQuestionVote(answerObj))
       }
 
     render (){
