@@ -1,17 +1,23 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import './css/question.css'
+//import { saveQuestionVote } from './actions/Questions'
 import {Link} from 'react-router-dom' 
 
-class Question extends Component {
+class Details extends Component {
     
+    handleVote = answerObj => {
+        const { dispatch } = this.props
+        //dispatch(saveQuestionVote(answerObj))
+      }
+
     render (){
         const { question, user, question_id } = this.props
         const {id} = question
 
         console.log(this.props)
         return (
-            <Link to={`/question/${id}`} className="question">
+            
             <div>
                 <div className="question" >
                 <div className="question-title"> 
@@ -21,6 +27,20 @@ class Question extends Component {
                 <div className="question-body">
                     <p>Would You Rather?</p>
                     <p>Option A: {question.optionOne.text}</p>
+                    <button
+                        className="vote-btn"
+                        onClick={() =>
+                        this.handleVote({
+                            
+                            qid: question.id,
+                            answer: 'optionOne'
+                        })
+                        }
+                    >
+                        Choose this
+                    </button>
+
+
                     <p>Option B: {question.optionTwo.text}</p>
                 </div>
 
@@ -28,7 +48,7 @@ class Question extends Component {
                 </div>
             </div>
                         
-           </Link>
+           
         )
     }
 }
@@ -46,4 +66,4 @@ function mapStateToProps({ questions, users }, { id }) {
 
   
 
-export default connect(mapStateToProps)(Question)
+export default connect(mapStateToProps)(Details)

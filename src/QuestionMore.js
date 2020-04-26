@@ -2,8 +2,9 @@
 
 import React, {Component} from 'react'
 import Question from './Question'
-import NewQuestion from './NewQuestion'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+import Details from './QuestionDetails'
 
 class More extends Component {
 
@@ -11,14 +12,15 @@ class More extends Component {
         const {id} = this.props
         return (
 
-        <div>
-        <Question id={id} />
-        </div>
+            <div>
+                <Details id={id}/>
+            </div>
+        
         )
     }
 }
 
-function mapStateToPropss ({ questions }, {match}){
+function mapStateToProps({ questions }, {match}){
     const {id} = match.params
     
     return {
@@ -29,4 +31,4 @@ function mapStateToPropss ({ questions }, {match}){
 
 }
 
-export default connect(mapStateToPropss)(More)
+export default connect(mapStateToProps)(More)

@@ -6,6 +6,7 @@ import LoadingBar from 'react-redux-loading-bar'
 import NewQuestion from './NewQuestion'
 import QuestionMore from './QuestionMore'
 import Nav from './Nav'
+//import Vote from './Vote'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './css/app.css'
 
@@ -29,7 +30,7 @@ class App extends Component {
                     
                     <Route path='/' exact component={Home}/>
                     <Route path='/question/:id' component={QuestionMore}/>
-                    <Route path='/new' component={QuestionMore}/>
+                    <Route path='/new' component={NewQuestion}/>
                        
                   </div>
 

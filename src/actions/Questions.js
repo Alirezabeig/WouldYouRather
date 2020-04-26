@@ -29,7 +29,6 @@ export function handleAddQuestion (info){
   }
 }
 
-
 export function ReceiveQuestions (questions) {
   return {
     type: RECEIVE_QUESTIONS,
@@ -37,14 +36,14 @@ export function ReceiveQuestions (questions) {
   }
 }
 
-export function handleSaveQuestionAnswer(answerObj) {
+export function handleSaveVote(voteObj) {
   return dispatch => {
     dispatch(showLoading())
 
     return saveQuestionVote({
-      ...answerObj
+      ...voteObj
     })
-      .then(() => dispatch(handleInitialData(answerObj.authedUser)))
+      .then(() => dispatch(handleInitialData(voteObj.authedUser)))
       .then(() => dispatch(hideLoading()))
   }
 }
