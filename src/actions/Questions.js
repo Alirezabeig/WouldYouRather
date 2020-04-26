@@ -6,6 +6,7 @@ import { handleInitialData } from './Shared'
 
 export const RECEIVE_QUESTIONS = 'RECEIVE_QUESTIONS'
 export const ADD_QUESTION = 'ADD_QUESTION'
+export const SAVE_VOTE= 'SAVE_VOTE'
 
 
 export function AddQuestion (question){ 
@@ -36,9 +37,19 @@ export function ReceiveQuestions (questions) {
   }
 }
 
+export function saveVote ({authedUser, qid, answer}) {
+  return {
+    type: SAVE_VOTE,
+    authedUser,
+    qid,
+    answer
+  }
+}
+
 export function handleSaveQuestionVote(voteObj) {
   return dispatch => {
     dispatch(showLoading())
+    dispatch(saveVote(voteObj))
 
     return saveQuestionVote({
       ...voteObj
