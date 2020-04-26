@@ -5,6 +5,9 @@ import Question from './Question'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import Details from './QuestionDetails'
+//import Details from './TakeVote'
+import { Router, Route, browserHistory } from 'react-router';
+
 
 class More extends Component {
 
@@ -13,12 +16,15 @@ class More extends Component {
         return (
 
             <div>
+                
+                  
                 <Details id={id}/>
             </div>
         
         )
     }
 }
+////*<Route path="/question/:question_id" component={Details}/>*//s
 
 function mapStateToProps({ questions }, {match}){
     const {id} = match.params
