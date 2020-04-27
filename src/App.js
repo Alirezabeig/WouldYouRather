@@ -6,9 +6,10 @@ import LoadingBar from 'react-redux-loading-bar'
 import NewQuestion from './NewQuestion'
 import QuestionMore from './QuestionMore'
 import Nav from './Nav'
-//import Vote from './Vote'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './css/app.css'
+import AuthedUser from './LogedUser'
+import LogedUser from './LogedUser'
 
 class App extends Component {
   componentDidMount() {
@@ -31,7 +32,7 @@ class App extends Component {
                     <Route path='/' exact component={Home}/>
                     <Route path='/question/:id' component={QuestionMore}/>
                     <Route path='/new' component={NewQuestion}/>
-                       
+                    <Route path='/login' component={LogedUser}/>
                   </div>
 
                   //<Home/> //<QuestionMore match={{params: {id:'xj352vofupe1dqz9emx13r'}}}/>

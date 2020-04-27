@@ -18,6 +18,11 @@ export default function Nav () {
             Compose Question
           </NavLink>
          
+          <NavLink to='/login' >
+            login
+          </NavLink>
+         
+
         </li>
         </div>
           </div>
