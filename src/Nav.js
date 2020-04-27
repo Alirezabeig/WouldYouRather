@@ -5,20 +5,19 @@ import { connect } from 'react-redux'
 
 class Nav extends Component {
   render () {
-    const {user} = this.props
+    const {user,authedUser
+    } = this.props
   return (
     
     <nav>
       
-      <div className="navbar">
+      <div className="topnav">
         <div >
 
-
-        <img src={user.avatarURL} alt="avatar!" className="avatar" />
-                    {user.name}
+                    
 
         <ul >
-          <NavLink to='/' >
+          <NavLink to='/home' >
             Home
           </NavLink>
         
@@ -45,11 +44,13 @@ class Nav extends Component {
   } 
 }
 
-function mapStateToProps({users,authedUser}){
+function mapStateToProps(state){
+  const { users, authedUser } = state
   const user = users[authedUser]
   return {
     user,
-    authedUser
+    authedUser,
+    
 
   }
 }

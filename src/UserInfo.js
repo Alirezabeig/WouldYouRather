@@ -6,7 +6,6 @@ import {Redirect} from 'react-router-dom'
 class user extends Component { 
 
     state = {
-        redirectToReferrer: false,
         toHome: false
       }
     
@@ -22,7 +21,7 @@ class user extends Component {
         const {users, user} =this.props
 
         if (toHome === true) {
-            return <Redirect to='/' />
+            return <Redirect to='/home' />
           }
 
         return (

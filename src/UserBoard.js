@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import './css/question.css'
+import './css/index.css'
 
 class UserBoard extends Component {
 
@@ -14,10 +15,12 @@ class UserBoard extends Component {
                     <div key={user.id}>
                         <div className="question">
                         <div className="question-title"> 
+                        
                         <img 
                             src={users[user.id].avatarURL}
                             alt={`Avatar of ${users[user.id].avatarURL}`}
                             />
+                            {users[user.id].name}
                         </div>
                         </div>
 
