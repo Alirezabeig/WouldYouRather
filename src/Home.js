@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import Question from './Question';
-import './css/home.css'
 import { createSelector } from 'reselect'
+import './css/index.css'
 
 class home extends Component {
 
@@ -26,12 +26,14 @@ class home extends Component {
 
           // onChange toggle the Type
           // if type is unanswered and if type is answered  
-            <div >
+            <div>
           
-          <select onChange={this.handleToggleType}>
+          <div>
+          <select onChange={this.handleToggleType} className="dropdowns" >
             <option value="Unanswered Questions">Unanswered Questions</option>
             <option value="Answered Questions">Answered Questions</option>
           </select>
+          </div>
               
         
           {Type === 'Unanswered Questions' && (

@@ -1,19 +1,18 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import './css/nav.css'
+import './css/index.css'
 
 export default function Nav () {
   return (
     <nav>
       
-      <div className="nav">
+      <div className="navbar">
         <div >
-        <li >
+        <ul >
           <NavLink to='/' >
             Home
           </NavLink>
-        </li>
-        <li>
+        
           <NavLink to='/new' >
             Compose Question
           </NavLink>
@@ -23,7 +22,7 @@ export default function Nav () {
           </NavLink>
          
 
-        </li>
+        </ul>
         </div>
           </div>
       
