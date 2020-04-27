@@ -196,3 +196,40 @@
   top: 69.00px;
 
 }
+
+.question {
+	margin: 0 auto;
+	max-width: 400px;
+	text-decoration:none;
+	cursor: default;
+
+	
+}
+
+.question-title {
+	border: 1px solid #dddddd;
+	padding: 12px;
+	border-radius: 5px 5px 0px 0px;
+	background: #fafbf9;
+	text-decoration:none;
+	cursor: pointer;
+}
+
+.question-body,
+.question-footer {
+	padding: 50px;
+	background: #ffffff;
+	text-decoration:none;
+}
+
+.avatar {
+	border-radius: 50%;
+	max-height: 50px;
+	float: left;
+	margin-right: 8px;
+	margin-top: 8px;
+	vertical-align: middle;
+	text-decoration:none;
+}
+
+
