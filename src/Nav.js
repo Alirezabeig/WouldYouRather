@@ -13,6 +13,10 @@ class Nav extends Component {
       <div className="navbar">
         <div >
 
+
+        <img src={user.avatarURL} alt="avatar!" className="avatar" />
+                    {user.name}
+
         <ul >
           <NavLink to='/' >
             Home
