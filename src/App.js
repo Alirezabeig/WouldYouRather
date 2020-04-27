@@ -10,6 +10,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './css/app.css'
 import AuthedUser from './LogedUser'
 import LogedUser from './LogedUser'
+import UserBoard from './UserBoard'
 
 class App extends Component {
   componentDidMount() {
@@ -33,6 +34,7 @@ class App extends Component {
                     <Route path='/question/:id' component={QuestionMore}/>
                     <Route path='/new' component={NewQuestion}/>
                     <Route path='/login' component={LogedUser}/>
+                    <Route path='/userboard' component={UserBoard}/>
                   </div>
 
                   //<Home/> //<QuestionMore match={{params: {id:'xj352vofupe1dqz9emx13r'}}}/>

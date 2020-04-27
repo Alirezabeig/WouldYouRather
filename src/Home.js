@@ -7,7 +7,7 @@ import './css/index.css'
 class home extends Component {
 
   state = {
-    Type: 'Unanswered Questions'
+    Type: 'Unvoted Questions'
   }
 
   handleToggleType = e => {
@@ -30,13 +30,13 @@ class home extends Component {
           
           <div>
           <select onChange={this.handleToggleType} className="dropdowns" >
-            <option value="Unanswered Questions">Unanswered Questions</option>
-            <option value="Answered Questions">Answered Questions</option>
+            <option value="Unvoted Questions">Unvoted Questions</option>
+            <option value="Voted Questions">Voted Questions</option>
           </select>
           </div>
               
         
-          {Type === 'Unanswered Questions' && (
+          {Type === 'Unvoted Questions' && (
           <ul >
             {unansweredQuestions.map(id => (
               <li key={id} >
@@ -46,7 +46,7 @@ class home extends Component {
           </ul>
         )}
 
-        {Type === 'Answered Questions' && (
+        {Type === 'Voted Questions' && (
           <ul>
             {answeredQuestions.map(id => (
               <li key={id} >

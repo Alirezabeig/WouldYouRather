@@ -1,3 +1,4 @@
+//This shows the lisst of the users whose information are coming from UserInfo
 import React, { Component } from 'react'
 import {setAuthedUser} from './actions/authedUsers'
 import user from './UserInfo'
