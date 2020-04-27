@@ -10,7 +10,7 @@ export function handleInitialData () {
   return (dispatch) => {
     dispatch(showLoading())
     return getInitialData()
-      .then(({users , questions}) => {
+      .then(({users , questions, authedUser}) => {
         dispatch(ReceiveUsers(users))
         dispatch(ReceiveQuestions(questions))
         dispatch(setAuthedUser(AUTHED_ID))
