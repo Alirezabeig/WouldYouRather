@@ -6,7 +6,7 @@ class Landing extends Component{
     return (
                 <div className="LandingText">
                     <p >Welcome To "Would You Rather" App.</p>
-                    <p> Log in so you can post!</p>
+                    
                 </div>
     )
 }

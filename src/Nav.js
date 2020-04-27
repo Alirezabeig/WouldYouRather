@@ -35,12 +35,12 @@ class Nav extends Component {
           </NavLink>
          
           <NavLink to='/userboard' >
-            LeaderBoard
+            Members
           </NavLink>
 
 
           <NavLink to='/login' >
-            log Out
+            Log Out
           </NavLink>
         </ul>
         ):(

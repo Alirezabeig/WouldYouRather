@@ -18,7 +18,7 @@ class App extends Component {
     this.props.dispatch(handleInitialData())
   }
       render() {
-
+        const {loading, authedUser}= this.props
         return (
 
           <Router>
@@ -27,7 +27,7 @@ class App extends Component {
             <div className="app">
                 
                 <Nav/>
-                  {this.props.loading ===true
+                  {loading ===true
                   ? null
                   : <div>
 
@@ -39,9 +39,6 @@ class App extends Component {
                     <Route path='/userboard' component={UserBoard}/>
                   </div>
 
-                  //<Home/> //<QuestionMore match={{params: {id:'xj352vofupe1dqz9emx13r'}}}/>
-                  
-                  
                   }
                 
                 
@@ -54,7 +51,8 @@ class App extends Component {
   }
 function mapStateToProps({authedUser}) { 
   return {
-    loading: authedUser===null
+    loading: authedUser===null,
+    authedUser,
   }
 }
 
