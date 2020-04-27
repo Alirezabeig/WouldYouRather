@@ -233,3 +233,139 @@
 }
 
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+
+.avatars {
+	border-radius: 50%;
+	max-height: 50px;
+	float: right;
+	margin-right: 80px;
+	margin-top: -5px;
+	
+  text-decoration:none;
+}
+
+.loggedin_name {
+  position: absolute;
+    box-sizing: content-box;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: right;
+    letter-spacing: 0.00px;
+    color: rgb(247, 252, 251);
+    -webkit-text-stroke: 1.00px rgba(0, 0, 0, 0);
+    font-size: 25.00px;
+    font-weight: 400;
+  font-style: normal;
+    font-family: 'New Peninim MT', Arial;
+    text-decoration: none;
+    box-shadow: none;
+    overflow-x: unset;
+    overflow-y: unset;
+    white-space: pre;
+    width: 444.00px;
+  height: 100.00px;
+  right: 0.00px;
+  top: 19.00px;
+
+}
+
+.group1 {
+
+  display: block;
+      position: absolute;
+      box-sizing: content-box;
+      background-color: transparent;
+      width: 571.00px;
+    height: 101.00px;
+    right: -300.00px;
+    top: 10.00px;
+}
+
+.group1 .name {
+  position: absolute;
+    
+    
+    background-color: rgba(255, 255, 255, 0);
+    text-align: left;
+    letter-spacing: 0.00px;
+    color: rgb(236, 240, 239);
+    -webkit-text-stroke: 1.00px rgba(0, 0, 0, 0);
+    font-size: 15.00px;
+    font-weight: 400;
+  font-style: normal;
+    font-family: 'New Peninim MT', Arial;
+    text-decoration: none;
+    box-shadow: none;
+    overflow-x: unset;
+    overflow-y: unset;
+    white-space: pre;
+    width: 444.00px;
+  height: 00.00px;
+  top: 10.00px;
+  right: 0.00px;
+
+}
+
+.group1 .pic {
+  position: absolute;
+  border-radius: 50%;
+	max-height: 50px;
+    
+    cursor: default;
+    fill: rgba(255, 255, 255, 1);
+    stroke: rgba(112, 112, 112, 1);
+        stroke-width: 1.00px;
+        stroke-linecap: butt;
+    box-shadow: none;
+    width: 40.00px;
+  height: auto;
+  left: 80.00px;
+  top: 0.00px;
+  bottom: 0.00px;
+
+}
+
+.login_text {
+  
+   
+    color: rgb(236, 240, 239);
+  
+    font-size: 15.00px;
+    
+
+}

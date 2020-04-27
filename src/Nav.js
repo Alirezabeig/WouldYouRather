@@ -4,19 +4,28 @@ import './css/index.css'
 import { connect } from 'react-redux'
 
 class Nav extends Component {
+
+
   render () {
-    const {user,authedUser
-    } = this.props
+    const {user,authedUser} = this.props
   return (
     
     <nav>
-      
-      <div className="topnav">
-        <div >
-        <img src={user.avatarURL} alt="avatar!" className="avatar" />
-                    {user.name}            
+       
+      <div >
+        <div className="topnav" >
+        
 
+        {authedUser ? (
         <ul >
+          <div className="group1">
+          <img src={user.avatarURL} alt="avatar!" className="pic" />
+          <div className="name">  
+            {user.name} 
+          </div>
+          </div>
+               
+
           <NavLink to='/home' >
             Home
           </NavLink>
@@ -31,11 +40,17 @@ class Nav extends Component {
 
 
           <NavLink to='/login' >
-            login
+            log Out
           </NavLink>
-         
-          
         </ul>
+        ):(
+          <ul>
+            
+              <p className="login_text">Log in so you can post questions</p>
+            </ul>
+        )}
+
+
         </div>
           </div>
       
@@ -43,10 +58,14 @@ class Nav extends Component {
   )
   } 
 }
+///<img src={user.avatarURL} alt="avatar!" className="avatar" />
+//{user.name}            
+
 
 function mapStateToProps(state){
   const { users, authedUser } = state
-  const user = users[authedUser]
+  //const user = users[authedUser]
+  const user =users[authedUser]
   return {
     user,
     authedUser,

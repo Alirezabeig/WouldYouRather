@@ -17,8 +17,7 @@ class AuthedUser extends Component {
 
         return (
             <div>
-                AuthedUSER
-              
+                
 
             {user_Id.map(id => (
               <li key={id} >

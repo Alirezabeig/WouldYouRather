@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {setAuthedUser} from './actions/authedUsers'
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom'
+import './css/index.css'
 
 class user extends Component { 
 
@@ -25,7 +26,7 @@ class user extends Component {
           }
 
         return (
-            <div className="user">
+            <div className="card">
 
                     <div key={user.id}>
                         <img src={user.avatarURL} alt="avatar!" className="avatar" />

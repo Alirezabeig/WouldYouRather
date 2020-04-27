@@ -4,16 +4,17 @@ import {ReceiveQuestions} from './Questions'
 import {setAuthedUser} from './authedUsers'
 import {showLoading, hideLoading} from 'react-redux-loading'
 
-const AUTHED_ID= 'tylermcginnis'
+//const AUTHED_ID= 'tylermcginnis'
 
-export function handleInitialData () {
+export function handleInitialData (userId) {
   return (dispatch) => {
     dispatch(showLoading())
     return getInitialData()
       .then(({users , questions, authedUser}) => {
         dispatch(ReceiveUsers(users))
         dispatch(ReceiveQuestions(questions))
-        dispatch(setAuthedUser(AUTHED_ID))
+        //dispatch(setAuthedUser(AUTHED_ID))
+        dispatch(setAuthedUser(userId ? userId : 'tylermcginnis'))
         dispatch(hideLoading())  
 
     })
